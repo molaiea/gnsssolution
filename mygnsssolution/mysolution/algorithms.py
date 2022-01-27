@@ -59,7 +59,7 @@ def satellite_position(file_name, sat_name):
     R3uk = np.array(((cos(-u_k), -sin(-u_k), 0), (sin(-u_k), cos(-u_k), 0), (0,0,1)))
     R1ik = np.array(((1,0,0), (0, cos(-i_k), -sin(-i_k)), (0, sin(-i_k), cos(-i_k))))
     #Calcul des coordonnées dans le référentiel CTS
-    dotproduct = np.dot(np.dot(R3lambda, R1lambda), R3uk)
+    dotproduct = np.dot(np.dot(R3lambda, R1ik), R3uk)
     vector = np.array(((r_k), (0), (0)))
     coords = np.dot(dotproduct, vector)
     return coords
