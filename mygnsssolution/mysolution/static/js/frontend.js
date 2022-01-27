@@ -8,7 +8,7 @@ $(document).ready(function(){
     $(".submit").click(function(e){
 
         var f_obj = $(".rinexfile").get(0).files[0];
-        console.log("File object:",f_obj.value);
+        console.log("File object:",f_obj);
         //console.log("The file name is:",f_obj.name);
         //console.log("The file size is:",f_obj.size);
 
@@ -18,7 +18,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             url: "/sendData",
-            data: {'data':f_obj.value},
+            data: {'data':f_obj, 'test': 666},
             beforeSend: function (xhr) {
                 xhr.setRequestHeader('X-CSRFToken', csrftoken);
             },

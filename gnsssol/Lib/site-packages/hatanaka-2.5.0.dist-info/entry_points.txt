@@ -1,0 +1,4 @@
+[console_scripts]
+rinex-compress = hatanaka.cli:compress_cli
+rinex-decompress = hatanaka.cli:decompress_cli
+
