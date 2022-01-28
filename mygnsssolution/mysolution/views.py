@@ -38,8 +38,8 @@ def handle_uploaded_file(f):
     for i in range(len(satellites_in_range_epoch2)):
         coords_epoch2[satellites_in_range_epoch2[i]] = satellite_position(path,satellites_in_range_epoch2[i],1) 
     
-    print(coords_epoch1)
-    print(coords_epoch2)
+    print(coords_epoch1["G08"])
+    print(coords_epoch2["G08"])
 
 
 
